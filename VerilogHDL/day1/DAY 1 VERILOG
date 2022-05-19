@@ -1,0 +1,41 @@
+VERILOG :
+ 1.TWO METHODOLOGIES
+     1. TOP DOWN METHODOLOGY
+	 2. BOTTOM UP METHODOLOGY
+ 2. WHERE WILL BE USED
+     VERILOG HAS TOTAL 4 MODELLING TECHIQUES
+	   1.DATAFLOW
+	   2.GATE LEVEL OR STRUCTRAL
+	   3.BEHAVIROAL
+	   4.SWITCH LEVEL
+ 3. DATAFLOW: 
+      1. SYMBOLS 
+	          AND &    NAND ~ &
+			  OR |     NOR ~ |
+			  NOT  ~ 
+			  XOR ^    XNOR ~ ^
+	  
+	  2. ASSIGN 
+4.MODULE NAME: 
+   small letter
+   capital letter
+   _
+   
+   23and - no
+   128 characters
+5. TB :
+      1. WHAT IS REG AND WIRE?
+	  2. INSTANCE
+	  3. INSTANTIATION
+	  4. STIMULUS
+	  5. DIRECTED TEST CASE
+	  6. WHAT IS INITIAL BLOCK?
+	  7. WHAT IS BEGIN END
+	  8. WHAT IS $DISPLAY $TIME 
+	  9. IDENTIFIERS 
+	 10. MAPPING STYLES
+	       NAMED
+		   ORDERED 
+	  
+   
+        
