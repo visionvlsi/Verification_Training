@@ -13,7 +13,7 @@
 
 # Basic gates - NOT, AND, NAND, OR, NOR, XOR, XNOR
 
-// Code your design here
+// Code your design here<br />
 module data_flow(a,b,ynota,ynotb,yand,ynand,yor,ynor,yxor,yxnor);<br>
 input a,b;<br>
 output ynota,ynotb,yand,ynand,yor,ynor,yxor,yxnor;<br>
