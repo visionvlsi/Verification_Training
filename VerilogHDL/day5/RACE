@@ -1,0 +1,19 @@
+//RACE CONDITIONS IN VERILOG
+
+1.WRITE-WRITE RACE
+2.WRITE/READ OR READ-WRITE RACE
+3. THERE IS NO READ READ RACE
+
+initial
+ begin
+  a=2;//writing or driving values 
+  $display(a);//sampling or reading the signal value
+ end
+ 
+initial 
+ it runs only once throughout your simulation
+ it is also procedural block.
+ all lhs signals in this initial block should be declared as reg 
+ 
+ you can have any number of initial blocks.
+ all the initial blocks will run in parallel
