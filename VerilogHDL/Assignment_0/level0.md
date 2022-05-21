@@ -17,14 +17,14 @@
 module data_flow(a,b,ynota,ynotb,yand,ynand,yor,ynor,yxor,yxnor);<br />
 input a,b;<br />
 output ynota,ynotb,yand,ynand,yor,ynor,yxor,yxnor;<br />
-assign ynota=~a,<br />
-       ynotb=~b,<br />
-       yand=a&b,<br />
-       ynand=~(a&b),<br />
-       yor=a|b,<br />
-       ynor=~(a|b),<br />
-       yxor=a^b,<br />
-       yxnor= a~^b;<br />
+assign ynota=~a, <br />
+       ynotb=~b, <br />
+       yand=a&b, <br />
+       ynand=~(a&b), <br />
+       yor=a|b, <br />
+       ynor=~(a|b), <br />
+       yxor=a^b, <br />
+       yxnor= a~^b; <br />
 endmodule<br />
 
 // Code your testbench here<br />
