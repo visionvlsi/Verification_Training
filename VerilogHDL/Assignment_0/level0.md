@@ -99,10 +99,10 @@ https://www.edaplayground.com/x/wQdm
 
 # 2. Design and implement FA, HA in data-flow and structural modeling.
 
- Half adder in data-flow and structural modeling<br/>
+ <p> Half adder in data-flow and structural modeling<br/>
        // Code your design here<br/>
        // `define DF<br/>
-       `define STRUCTURAL<br/>
+       `define STRUCTURAL<br/> </p>
       <p> module ha_df_struc(a,b,sum,co);<br/>
        input a,b;<br/>
        output sum,co;<br/>
