@@ -54,3 +54,6 @@ endmodule
 https://www.edaplayground.com/x/Zj8L
 
 <a href="url">link text</a>
+<a href="http://www.something.com"> Something </a>
+<!-- or -->
+<a href="https://www.something.com"> Something </a>
