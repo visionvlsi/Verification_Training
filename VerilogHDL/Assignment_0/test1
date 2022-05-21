@@ -21,3 +21,5 @@ assign sum=a^b^cin,
 `endif
 
 endmodule
+
+https://www.edaplayground.com/x/Zj8L
