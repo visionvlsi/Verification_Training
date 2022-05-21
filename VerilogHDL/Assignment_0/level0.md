@@ -154,4 +154,4 @@ https://www.edaplayground.com/x/f5qk
 
 <br>
 <br>
-<b><u>Full Adder</u></b>
+<u>Full Adder</u>
