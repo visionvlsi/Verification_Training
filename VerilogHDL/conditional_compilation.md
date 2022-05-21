@@ -1,11 +1,11 @@
 <p>// Code your design here<br/>
 `define DFLOW<br/>
-
+<br/>
 module mux(<br/>
  input i0,i1,sel,<br/>
  output y<br/>
  );<br/>
- 
+ <br/>
  //wire w1,w2,sbar; <br/>
   //y = sbar*i0 + s *i1<br/>
   <br/>  
@@ -19,7 +19,7 @@ module mux(<br/>
   and a2(w2,sel, i1);<br/>
   or  a3(y , w1, w2);<br/>
  `endif<br/>
-  
+  <br/>
 endmodule<br/></p>
 
 <p>//Code your testbench here<br/>
