@@ -110,7 +110,7 @@ https://www.edaplayground.com/x/wQdm
        assign sum=a^b,<br/>
               co=a&b;<br/>
        `endif<br/>
-       
+       <br/>
        `ifdef STRUCTURAL<br/>
        xor(sum,a,b);<br/>
        and(co,a,b);<br/>
