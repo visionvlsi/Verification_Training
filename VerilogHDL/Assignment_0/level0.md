@@ -11,7 +11,7 @@
 
 //Design and implement all basic gates in data-flow and behavioral modeling.<br />
 
-# Basic gates - NOT, AND, NAND, OR, NOR, XOR, XNOR<br />
+# 1. Basic gates - NOT, AND, NAND, OR, NOR, XOR, XNOR<br />
 
 // Code your design here<br />
 module data_flow(a,b,ynota,ynotb,yand,ynand,yor,ynor,yxor,yxnor);<br>
@@ -97,7 +97,9 @@ endmodule<br /></p>
 
 https://www.edaplayground.com/x/wQdm
 
-# 2. Design and implement FA, HA in data-flow and structural modeling.
+# 2. Design and implement FA, HA in data-flow and structural modeling.<br>
+<br>
+<b> Half Adder</b>
 
  <p> Half adder in data-flow and structural modeling<br/>
        // Code your design here<br/>
@@ -139,6 +141,7 @@ module test;<br/>
     #5 $finish;<br/>
     
   end<br/>
+       
   
   initial begin<br/>
     $monitor("simtime=%0g, a=%b, b=%b, sum=%b, co=%b",$time, a, b, sum, co);<br/>
@@ -146,5 +149,9 @@ module test;<br/>
   end<br/>
   
 endmodule<br/></p>
+
+<br>
+<br>
+<b> Full Adder</b>
 
 https://www.edaplayground.com/x/f5qk
