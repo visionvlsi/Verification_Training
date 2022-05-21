@@ -14,9 +14,9 @@
 # Basic gates - NOT, AND, NAND, OR, NOR, XOR, XNOR
 
 // Code your design here
-module data_flow(a,b,ynota,ynotb,yand,ynand,yor,ynor,yxor,yxnor);<br />
-input a,b;<br />
-output ynota,ynotb,yand,ynand,yor,ynor,yxor,yxnor;<br />
+module data_flow(a,b,ynota,ynotb,yand,ynand,yor,ynor,yxor,yxnor);<br>
+input a,b;<br>
+output ynota,ynotb,yand,ynand,yor,ynor,yxor,yxnor;<br>
 assign ynota=~a, <br>
        ynotb=~b, <br>
        yand=a&b, <br>
