@@ -104,17 +104,22 @@ https://www.edaplayground.com/x/wQdm
        // `define DF<br/>
        `define STRUCTURAL<br/> </p>
       <p> module ha_df_struc(a,b,sum,co);<br/>
+        <br/>
        input a,b;<br/>
        output sum,co;<br/>
+       <br/>
        `ifdef DF<br/>
        assign sum=a^b,<br/>
               co=a&b;<br/>
        `endif<br/>
        <br/>
        `ifdef STRUCTURAL<br/>
+        <br/>
        xor(sum,a,b);<br/>
        and(co,a,b);<br/>
+       <br/>
        `endif<br/>
+       <br/>
        endmodule<br/></p>
        
  // Code your testbench here<br/>
