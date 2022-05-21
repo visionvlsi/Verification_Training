@@ -99,7 +99,7 @@ https://www.edaplayground.com/x/wQdm
 
 # 2. Design and implement FA, HA in data-flow and structural modeling.<br>
 <br>
-<b> Half Adder</b>
+<ins><b> Half Adder </b></ins>
 
  <p> Half adder in data-flow and structural modeling<br/>
        // Code your design here<br/>
