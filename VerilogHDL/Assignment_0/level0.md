@@ -101,8 +101,7 @@ https://www.edaplayground.com/x/wQdm
 
 <p> Half adder in data-flow and structural modeling<br/>
        
-       // Code your design here<br/>
-
+// Code your design here<br/>
 //`define DF<br/>
 `define STRUCTURAL<br/>
 module ha_df_struc(a,b,sum,co);<br/>
@@ -123,9 +122,9 @@ module ha_df_struc(a,b,sum,co);<br/>
   
    `endif<br/>
     
-endmodule<br/>
+endmodule<br/></p>
        
-       // Code your testbench here<br/>
+  <p>// Code your testbench here<br/>
 `timescale 1ns/1ns<br/>
 module test;<br/>
   
