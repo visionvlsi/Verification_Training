@@ -150,8 +150,8 @@ module test;<br/>
   
 endmodule<br/></p>
 
-<br>
-<br>
-<b> Full Adder</b>
-
 https://www.edaplayground.com/x/f5qk
+
+<br>
+<br>
+<ul><b> Full Adder</b></ul>
