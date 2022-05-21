@@ -52,3 +52,44 @@ endmodule<br />
 
 
 https://www.edaplayground.com/x/SH5G
+
+
+// Code your design here<br />
+module beha_model(a,b,ynota,ynotb,yand,ynand,yor,ynor,yxor,yxnor);<br />
+input a,b;<br />
+output reg ynota,ynotb,yand,ynand,yor,ynor,yxor,yxnor;<br />
+always@*<br />
+  begin<br />
+ynota=~a;<br />
+ynotb=~b;<br />
+yand=a&b;<br />
+    ynand=~(a&b);<br />
+yor=a|b;<br />
+    ynor=~(a|b);<br />
+yxor=a^b;<br />
+yxnor= a~^b;<br />
+  end<br />
+endmodule<br />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+https://www.edaplayground.com/x/wQdm
