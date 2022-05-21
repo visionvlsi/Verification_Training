@@ -17,6 +17,7 @@
 module data_flow(a,b,ynota,ynotb,yand,ynand,yor,ynor,yxor,yxnor);<br />
 input a,b;<br />
 output ynota,ynotb,yand,ynand,yor,ynor,yxor,yxnor;<br />
+<br />
 assign ynota=~a, <br />
        ynotb=~b, <br />
        yand=a&b, <br />
