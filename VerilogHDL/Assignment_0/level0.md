@@ -148,6 +148,6 @@ module test;<br/>
     
   end<br/>
   
-endmodule<br/>
+endmodule<br/></p>
 
 https://www.edaplayground.com/x/f5qk
