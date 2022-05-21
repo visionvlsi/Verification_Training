@@ -9,9 +9,9 @@
 <li>Design and implement Even Parity & Odd parity generator.</li>
 </ul>
 
-//Design and implement all basic gates in data-flow and behavioral modeling.
+//Design and implement all basic gates in data-flow and behavioral modeling.<br />
 
-# Basic gates - NOT, AND, NAND, OR, NOR, XOR, XNOR
+# Basic gates - NOT, AND, NAND, OR, NOR, XOR, XNOR<br />
 
 // Code your design here<br />
 module data_flow(a,b,ynota,ynotb,yand,ynand,yor,ynor,yxor,yxnor);<br>
