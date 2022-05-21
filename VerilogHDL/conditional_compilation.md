@@ -12,7 +12,7 @@ module mux(<br/>
  `ifdef DFLOW<br/>
   assign y =  (~(sel) & i0) | sel &i1;<br/>
  `endif<br/>
-  
+  <br/>
  `ifdef GFLOW<br/>
  not n1(sbar,sel);<br/>
   and a1(w1,sbar, i0);<br/>
@@ -20,7 +20,7 @@ module mux(<br/>
   or  a3(y , w1, w2);<br/>
  `endif<br/>
   
-endmodule<br/>
+endmodule<br/></p>
 
 <p>//Code your testbench here<br/>
 `timescale 1ns/1ps<br/>
