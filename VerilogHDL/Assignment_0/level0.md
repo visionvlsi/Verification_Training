@@ -72,9 +72,9 @@ yxnor= a~^b;<br />
 endmodule<br /></p>
 
 
-<p>// Code your testbench here<br />
-`timescale 1ns/1ps<br />
-module test;<br />
+<p>// Code your testbench here<br/>
+`timescale 1ns/1ps<br/>
+module test;<br/>
 
 reg a,b;<br />
 wire ynota,ynotb,yand,ynand,yor,ynor,yxor,yxnor;<br />
@@ -99,11 +99,11 @@ https://www.edaplayground.com/x/wQdm
 
 # 2. Design and implement FA, HA in data-flow and structural modeling.
 
-<p> Half adder in data-flow and structural modeling<br/>
+ Half adder in data-flow and structural modeling<br/>
        // Code your design here<br/>
        // `define DF<br/>
        `define STRUCTURAL<br/>
-       module ha_df_struc(a,b,sum,co);<br/>
+      <p> module ha_df_struc(a,b,sum,co);<br/>
        input a,b;<br/>
        output sum,co;<br/>
        `ifdef DF<br/>
@@ -117,8 +117,8 @@ https://www.edaplayground.com/x/wQdm
        `endif<br/>
        endmodule<br/></p>
        
-  <p>// Code your testbench here<br/>
-`timescale 1ns/1ns<br/>
+ // Code your testbench here<br/>
+ <p>`timescale 1ns/1ns<br/>
 module test;<br/>
   
   reg a,b;<br/>
