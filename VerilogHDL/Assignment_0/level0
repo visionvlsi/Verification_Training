@@ -6,3 +6,21 @@ Design and implement Multiplexer using conditional statement.
 Design and implement Or, And, Xor gate using Multiplexer (2×1).
 Design and implement 4-bit adder/sub using structural.
 Design and implement Even Parity & Odd parity generator.
+
+
+//Design and implement all basic gates in data-flow and behavioral modeling.
+
+# Basic gates - NOT, AND, NAND, OR, NOR, XOR, XNOR
+
+module data_flow(a,b,y);
+input a,b;
+output y;
+assign ynota=~a,
+       ynotb=~b,
+       yand=a&b,
+       ynand=~(a&b),
+       yor=a|b,
+       ynor=~(a|b),
+       yxor=a^b,
+       yxnor= a~^b;
+endmodeule
