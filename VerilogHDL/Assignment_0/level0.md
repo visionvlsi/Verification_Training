@@ -54,7 +54,7 @@ endmodule<br />
 https://www.edaplayground.com/x/SH5G
 
 
-// Code your design here<br />
+<p>// Code your design here<br />
 module beha_model(a,b,ynota,ynotb,yand,ynand,yor,ynor,yxor,yxnor);<br />
 input a,b;<br />
 output reg ynota,ynotb,yand,ynand,yor,ynor,yxor,yxnor;<br />
@@ -69,27 +69,30 @@ yor=a|b;<br />
 yxor=a^b;<br />
 yxnor= a~^b;<br />
   end<br />
-endmodule<br />
+endmodule<br /></p>
 
 
+<p>// Code your testbench here<br />
+`timescale 1ns/1ps<br />
+module test;<br />
 
+reg a,b;<br />
+wire ynota,ynotb,yand,ynand,yor,ynor,yxor,yxnor;<br />
+integer i;<br />
 
+beha_model ins1(a,b,ynota,ynotb,yand,ynand,yor,ynor,yxor,yxnor);<br />
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+initial<br />
+for(i=0;i<=3;i=i+1)<br />
+begin<br />
+{a,b}=i;<br />
+#5;<br />
+end<br />
+initial<br />
+$monitor("simtime=%0g, a=%b, b=%b, ynota=%b,ynotb=%b,yand=%b,ynand=%b,yor=%b,ynor=%b,yxor=%b,yxnor=%b",$time,a,b,ynota,ynotb,yand,ynand,yor,ynor,yxor,yxnor);<br />
+initial<br />
+#80 $finish;<br />
+endmodule<br /></p>
 
 
 https://www.edaplayground.com/x/wQdm
