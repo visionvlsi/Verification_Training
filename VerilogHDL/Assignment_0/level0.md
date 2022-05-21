@@ -2,7 +2,7 @@
 
 <ul>
 <li>Design and implement all basic gates in data-flow and behavioral modeling.</li>
-<li>Design and implement F.A, HA in data-flow and structural modeling.</li>
+<li>Design and implement FA, HA in data-flow and structural modeling.</li>
 <li>Design and implement Multiplexer using conditional statement.</li>
 <li>Design and implement Or, And, Xor gate using Multiplexer (2×1).</li>
 <li>Design and implement 4-bit adder/sub using structural.</li>
