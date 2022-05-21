@@ -1,13 +1,13 @@
 # LEVEL-0:
 
-<ul>
+<ol>
 <li>Design and implement all basic gates in data-flow and behavioral modeling.</li>
 <li>Design and implement FA, HA in data-flow and structural modeling.</li>
 <li>Design and implement Multiplexer using conditional statement.</li>
 <li>Design and implement Or, And, Xor gate using Multiplexer (2×1).</li>
 <li>Design and implement 4-bit adder/sub using structural.</li>
 <li>Design and implement Even Parity & Odd parity generator.</li>
-</ul>
+</ol>
 
 //Design and implement all basic gates in data-flow and behavioral modeling.<br />
 
@@ -96,3 +96,58 @@ endmodule<br /></p>
 
 
 https://www.edaplayground.com/x/wQdm
+
+# 2. Design and implement FA, HA in data-flow and structural modeling.
+
+<p> Half adder in data-flow and structural modeling<br/>
+       
+       // Code your design here<br/>
+
+//`define DF<br/>
+`define STRUCTURAL<br/>
+module ha_df_struc(a,b,sum,co);<br/>
+  input a,b;<br/>
+  output sum,co;<br/>
+  
+  `ifdef DF<br/>
+  
+  	assign 	sum=a^b,<br/>
+         	       co=a&b;<br/>
+  
+  `endif<br/>
+  
+    `ifdef STRUCTURAL<br/>
+  
+  	xor(sum,a,b);<br/>
+  	and(co,a,b);<br/>
+  
+   `endif<br/>
+    
+endmodule<br/>
+       
+       // Code your testbench here<br/>
+`timescale 1ns/1ns<br/>
+module test;<br/>
+  
+  reg a,b;<br/>
+  wire sum,co;<br/>
+  
+   ha_df_struc ins1(a,b,sum,co);<br/>
+  
+  initial begin<br/>
+       {a,b}=2'b00;<br/>
+    #5 {a,b}=2'b01;<br/>
+    #5 {a,b}=2'b10;<br/>
+    #5 {a,b}=2'b11;<br/>
+    #5 $finish;<br/>
+    
+  end<br/>
+  
+  initial begin<br/>
+    $monitor("simtime=%0g, a=%b, b=%b, sum=%b, co=%b",$time, a, b, sum, co);<br/>
+    
+  end<br/>
+  
+endmodule<br/>
+
+https://www.edaplayground.com/x/f5qk
