@@ -49,6 +49,8 @@ module test;
   initial 
     $monitor("simtime=%0t,a=%b,b=%b,cin=%b,sum=%b,cin=%b",$time,a,b,cin,sum,co);
 endmodule
-                  
+    
+//Link in the EDAPlayground, copy the below link and paste it in the new tab
+
 https://www.edaplayground.com/x/Zj8L
 
