@@ -1,4 +1,5 @@
-Full Adder
+<p>
+ Full Adder
 // Code your design here
  `define DF
 //`define STRUCTURAL
@@ -50,10 +51,6 @@ module test;
   initial 
     $monitor("simtime=%0t,a=%b,b=%b,cin=%b,sum=%b,cin=%b",$time,a,b,cin,sum,co);
 endmodule
-
+                  </p>
 https://www.edaplayground.com/x/Zj8L
 
-<a href="url">link text</a>
-<a href="http://www.something.com"> Something </a>
-<!-- or -->
-<a href="https://www.something.com"> Something </a>
