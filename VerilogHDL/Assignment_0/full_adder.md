@@ -24,7 +24,6 @@ assign sum=a^b^cin,
 
 endmodule
 
-
 // Code your testbench here
 
 `timescale 1ns/1ns
