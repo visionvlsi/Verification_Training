@@ -1,4 +1,4 @@
-<p>
+
  Full Adder
 // Code your design here
  `define DF
@@ -49,6 +49,6 @@ module test;
   initial 
     $monitor("simtime=%0t,a=%b,b=%b,cin=%b,sum=%b,cin=%b",$time,a,b,cin,sum,co);
 endmodule
-                  </p>
+                  
 https://www.edaplayground.com/x/Zj8L
 
