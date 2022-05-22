@@ -87,6 +87,7 @@ module test;
       $monitor("simtime=%t,a=%b,b=%b,y=%b",$time,a,b,y);
 endmodule
 
+// EDAPlayground link https://www.edaplayground.com/x/D4vS
 
 //_______________________________________________________________
 //______________________________XOR Gate using Mux21______________
@@ -111,7 +112,7 @@ endmodule
 module xorgate_UsingMUx(a,b,y);
    input a,b;
    output y;
-  assign y=b?1'b1:1'b0;
+   assign y=b?(a? 1'b0: 1'b1):(a? 1'b1: 1'b0);
 endmodule
 
 
