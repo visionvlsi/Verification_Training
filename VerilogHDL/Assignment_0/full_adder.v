@@ -1,6 +1,5 @@
 
- Full Adder
-// Code your design here
+// Full Adder Code your design here
  `define DF
 //`define STRUCTURAL
 module fa_df_struc(a,b,cin,sum,co);
@@ -50,7 +49,5 @@ module test;
     $monitor("simtime=%0t,a=%b,b=%b,cin=%b,sum=%b,cin=%b",$time,a,b,cin,sum,co);
 endmodule
     
-//Link in the EDAPlayground, copy the below link and paste it in the new tab
-
-https://www.edaplayground.com/x/Zj8L
+//Link in the EDAPlayground, copy the link and paste it in the new tab   https://www.edaplayground.com/x/Zj8L
 
