@@ -40,9 +40,7 @@ initial
 endmodule
 
 
-//EDAPlayground link
-
-https://www.edaplayground.com/x/SH5G
+//EDAPlayground link     https://www.edaplayground.com/x/SH5G
 
 // Behavioural modeling of Basic gates
 module beha_model(a,b,ynota,ynotb,yand,ynand,yor,ynor,yxor,yxnor);
@@ -82,6 +80,4 @@ initial
 #80 $finish;
 endmodule
 
-//EDAPlayground link
-
-https://www.edaplayground.com/x/wQdm
+//EDAPlayground link     https://www.edaplayground.com/x/wQdm
