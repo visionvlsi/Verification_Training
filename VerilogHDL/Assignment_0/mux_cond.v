@@ -14,7 +14,7 @@ endmodule
 module test;
   reg a,b,sel;
   wire y;
-  nteger i;
+  integer i;
   mux21 ins1(a,b,sel,y);
   
   initial begin 
