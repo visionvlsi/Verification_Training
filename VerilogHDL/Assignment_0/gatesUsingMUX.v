@@ -69,3 +69,50 @@ module test;
 endmodule
 
 //EDAPlayground https://www.edaplayground.com/x/Utix
+
+
+//XOR Gate
+// Code your design here
+/*
+module xorgate_UsingMUx(a,b,y);
+   input a,b;
+   output y;
+   assign y=b?(a? 1'b0: 1'b1):(a? 1'b1: 1'b0);
+endmodule
+*/
+ module xorgate_MUX21(a,b,y);
+    input a,b;
+    output y;
+   mux21 m1(y1,a,1'b0,1'b1);
+   mux21 m2(y2,a,1'b1,1'b0);
+   mux21 m3(y,b,y1,y2);
+ endmodule
+
+module mux21(y,sel,a,b);
+input sel,a,b;
+output y;
+assign y=sel?b:a;
+endmodule
+
+//testbench
+// Code your testbench here
+// or browse Examples
+//Testbench
+`timescale 1ns/1ns
+module test;
+   reg a,b;
+   wire y;
+   xorgate_MUX21 ins1(a,b,y);
+   initial begin
+      a=0; b=0;
+      #5 b=1;
+      #5 a=1;
+      #5 b=0;
+      #5 $finish;
+   end
+   
+   initial
+      $monitor("simtime=%t,a=%b,b=%b,y=%b",$time,a,b,y);
+endmodule
+
+//EDAPlayground https://www.edaplayground.com/x/hJdq
