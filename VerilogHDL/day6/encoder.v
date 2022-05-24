@@ -46,3 +46,6 @@ initial
  
  end
 endmodule
+
+
+//EDAPlayground https://www.edaplayground.com/x/Ymxc
