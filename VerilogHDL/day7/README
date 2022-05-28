@@ -1,0 +1,24 @@
+TASK:
+ TO DO ANY OPERATION REPEATEDLY WITH DIFF VALUES
+ 
+ADD A+B
+
+
+task add; // task declaration and definition
+ input [3:0]a,b;
+ output [3:0]c;
+ 
+ begin
+  #4 c = a+b; 
+ end
+endtask
+
+//calling the task 
+ add(1,2);
+ add(11,12);
+ add(10,2);
+ add(4,2);
+ add(3,2);
+ add(5,2);
+ 
+

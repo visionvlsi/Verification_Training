@@ -1,29 +1,19 @@
 module tb;
 
-reg [1:0]a,b;
- wire [3:0]y;
+reg [3:0] a;
+reg [3:0] b;
+reg cin;
 
-mul m1(a,b,y);
-initial
- begin
-  a=2'h0;b=2'h0;#1; $display($time,a,b,y);
-  a=2'h0;b=2'h1;
-  a=0;b=2;
-  a=0;b=3;
-  a=1;b=0;
-  a=1;b=1;
-  a=1;b=2;
-  a=1;b=3;
-  a=2;b=0;
-  a=2;b=1;
-  a=2;b=2;
-  a=2;b=3;
-  a=3;b=0;
-  a=3;b=1;
-  a=3;b=2;
-  a=3;b=3;
+wire [3:0] sum;
+wire cout;
 
- 
- end
- 
- endmodule
+
+cla_adder uut (.a(a),.b(b),.cin(cin),.sum(sum),.cout(cout));
+initial begin
+
+a = 0; b = 0; cin = 0; #100; $display(a,b,cin,":",sum,cout);
+a = 2; b = 3; cin = 1; #100; $display(a,b,cin,":",sum,cout);
+a = 1; b = 4; cin = 2; #100; $display(a,b,cin,":",sum,cout);
+a = 5; b = 6; cin = 1; #100; $display(a,b,cin,":",sum,cout);
+end
+endmodule
