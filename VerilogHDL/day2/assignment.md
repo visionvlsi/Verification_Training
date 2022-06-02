@@ -1,1 +1,0 @@
-ASSIGNMENT : COMPLETE OR AND XOR GATES IN DATAFLOW WITH STIMULUS and verify results using simulators.
