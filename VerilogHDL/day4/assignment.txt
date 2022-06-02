@@ -3,7 +3,7 @@
 
 //MUX4x1 using Dataflow
 
-module mux4x1(i,s,y);
+module mux8x1(i,s,y);
 input [7:0]i;
 input [2:0]s;
 output y;
