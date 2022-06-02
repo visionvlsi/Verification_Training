@@ -1,0 +1,37 @@
+//ASSIGNMENT : TEST THE FA USING HA USING FA TB AND CHECK THE OUTPUTS
+
+// HA design
+
+module ha(a,b,sum,co);
+input a,b;
+output sum,co;
+assign sum=a^b;
+assign co=a&b;
+endmodule
+
+// FA design
+
+module fa(a,b,cin,sum,co);
+input a,b,cin;
+output sum,co;
+ha ins1(a,b,s1,c1);
+ha ins2(cin,s1,sum,c2);
+or(co,c1,c2);
+endmodule
+
+//FA Testbench 
+
+`timescale 1ns/1ps
+module tb;
+reg a,b,cin;
+wire sum,co;
+integer i;
+fa ins1(a,b,cin,sum,co);
+initial begin 
+$monitor("simtime=0g,a=%b,b=%b,cin=%b,sum=%b,co=%b",$time,a,b,cin);
+for(i=0;i<8;i=i+1) begin 
+{a,b,cin}=i;
+#5;
+end
+
+endmodule
