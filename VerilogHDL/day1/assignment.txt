@@ -1,0 +1,50 @@
+//ASSIGNMENT : COMPLETE OR AND XOR GATES IN DATAFLOW WITH STIMULUS
+
+//OR Gate in dataflow
+
+module orgate(a,b,y);
+input a,b;
+output y;
+assign y=a|b;
+endmodule
+
+//orgate testbench
+
+`timescale 1ns/1ps
+module tb;
+reg a,b;
+wire y;
+integer i;
+orgate ins1(a,b,y);
+initial begin 
+for(i=0;i<4;i=i+1)
+begin 
+{a,b}=i;
+end
+end
+endmodule
+
+
+//XOR Gate in dataflow
+
+module xorgate(a,b,y);
+input a,b;
+output y;
+assign y=a^b;
+endmodule
+
+//xorgate testbench
+
+`timescale 1ns/1ps
+module tb;
+reg a,b;
+wire y;
+integer i;
+xorgate ins1(a,b,y);
+initial begin 
+for(i=0;i<4;i=i+1)
+begin 
+{a,b}=i;
+end
+end
+endmodule
