@@ -53,3 +53,5 @@ $monitor("simtime=%0g,clk=%b,rst=%b,d=%b,q=%b",$time,clk,rst,d,q);
   @(posedge clk) $finish;
 end
 endmodule
+
+https://www.edaplayground.com/x/pBvM
