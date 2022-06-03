@@ -35,18 +35,21 @@ reg clk,rst,d;
 wire q;
 dff ins1(clk,rst,d,q);
 initial
-clk=0;
-always 
+  begin
+clk=0; rst=0;
+    forever
 #5 clk=~clk;
+  end
 initial
 begin
 $monitor("simtime=%0g,clk=%b,rst=%b,d=%b,q=%b",$time,clk,rst,d,q);
-rst=0;
 @(negedge clk) rst=1;
 @(posedge clk) rst=1;
 @(negedge clk) rst=0;d=1;
 @(posedge clk) d=1;
 @(negedge clk) d=0;
 @(posedge clk) d=0;
+ 
+  @(posedge clk) $finish;
 end
 endmodule
