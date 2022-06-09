@@ -1,0 +1,15 @@
+LEVEL-1:
+
+ Design and implement Priority Encoder.
+ Design and implement Or, And, Xor gate using Multiplexer (2×1).
+ Design and implement 4-bit adder/sub using structural.
+ Design and implement 4-bit CLAA.
+ Design and implement a Swap/Buffer circuit using multiplexer.
+ Design and implement 8:3encoder.
+
+LEVEL-2:
+
+ Design and implement JK-FlipFlop, D-FlipFlop and T-FlipFlop.
+ Design and implement a system which takes 4-bit data and shifts left, right, reverses, passes the data depending upon a control signal(Don’t use any registers).
+ Design and implement a 4-bit Counter
+ Design and implement a system which takes 8-bit data and stores in memory and based on request it should send data ROM/ RAM.
