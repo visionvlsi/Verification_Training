@@ -1,0 +1,22 @@
+$display - HOW MANY WE WRITE , THAT MANY TIMES $DISPLAY
+
+$WRITE - 
+
+
+$WRITE(HELLO)
+$WRITE(WORLD)
+
+HELLO WORLD
+
+$MONITOR
+  $monitor(a,b);
+ 
+ everytime a,b are changing every 1ns 
+ $monitor
+ 
+$strobe
+ it will execute at the end of time slot.
+ 
+ 
+ 
+ 
