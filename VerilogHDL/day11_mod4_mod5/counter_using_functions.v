@@ -48,3 +48,5 @@ module mod4_mod5(clk,rst,count);
   
 
 endmodule
+
+//https://www.edaplayground.com/x/cKQ5
