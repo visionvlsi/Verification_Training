@@ -1,0 +1,43 @@
+Counters
+ 1. Synchronous Counters : Based on clock
+ 
+ 2. Asynchronous Counters: May be clock or more than signal other than clock
+
+Why  you need a counter?
+Counts some values
+We use this counts as clock delays in our operations
+
+1.a=1; y =a after 10 clock cycles.
+2. You need a counter.
+
+traffic light
+red 2sec
+
+orange
+1sec
+
+green
+10 sec
+red
+
+Synchronous vs Asynchrnous Counters
+
+1. Asynchronous Counters or Ripple Counter
+   Structural or Behavioral Counters
+
+Count 0-10 : Async
+4 FF
+
+2. Up and Down Counter -
+ 0 1 2 3 2 1 0 1 2 3 2 1 0  .....
+
+3. 0-20
+   0123454323456789876 - TRY
+
+FSM TYPE COUNTERS
+4.ModN Counter
+  Mixed Mod
+5.Fancy
+ 
+https://www.edaplayground.com/x/J8jb
+https://www.edaplayground.com/x/GWQS
