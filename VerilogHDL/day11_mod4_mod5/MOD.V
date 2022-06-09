@@ -14,7 +14,7 @@ module mod4_mod5(clk,rst,count);
   
   always @(posedge clk or posedge rst)
   begin
-   if(rst) state <=0;
+	  if(rst) begin state <=0; count=0; end
    else
     case(state)
 	  mod4 : if(count == 3)  state <= mod5;
@@ -39,5 +39,5 @@ endmodule
 
 
 
-
+// https://www.edaplayground.com/x/f2J_
     
