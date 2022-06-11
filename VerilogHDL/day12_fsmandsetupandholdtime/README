@@ -1,0 +1,19 @@
+~ vs !
+
+
+reg clk;
+
+~!
+
+
+reg [3:0]a;
+
+
+a=4'b1010;
+b=~a; 0101
+
+if(!a) // if  a values is 0 then b=a; 
+ b=a;
+else
+ b=c;
+ 
