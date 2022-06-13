@@ -30,3 +30,91 @@ case({j,k})
 endcase
 end
 endmodule
+
+// testbench
+`timescale 1ns/1ps
+module tb;
+ reg j,k;
+ reg clk,rst;
+ wire q,qbar;
+ jkff ins1(j,k,clk,rst,q,qbar);
+ 
+  
+  initial begin 
+    $monitor($time, " clk=%b,rst=%b,j=%b,k=%b,q=%b,qbar=%b",clk,rst,j,k,q,qbar);
+       clk=0;
+       rst=0;
+       forever
+         #5 clk=~clk;
+  end
+  initial
+    begin
+     @(posedge clk);
+    @(negedge clk) rst=1;
+    @(posedge clk);
+    @(negedge clk) rst=0; j=0; k=0;
+     @(posedge clk);
+    @(negedge clk)  j=0; k=1;
+     @(posedge clk);
+    @(negedge clk) j=1; k=0;
+     @(posedge clk);
+    @(negedge clk)  j=1; k=1;
+     @(posedge clk);
+    #10;
+    $finish;
+  end
+endmodule
+
+// https://www.edaplayground.com/x/qTdy
+
+// DFF
+
+module dff(clk,rst,d,q,qbar);
+input clk,rst;
+input d;
+output reg q, qbar;
+always@(posedge clk)
+begin
+if(rst)
+begin 
+q<=0;
+qbar<=1;
+end
+else
+case(d)
+0: begin q<=0; qbar<=1; end
+1: begin q<=1; qbar<=0; end
+endcase
+end
+endmodule
+
+// testbench
+`timescale 1ns/1ps
+module tb;
+ reg j,k;
+ reg clk,rst;
+ wire q,qbar;
+ dff ins1(clk,rst,d,q,qbar);
+ 
+  
+  initial begin 
+    $monitor($time, " clk=%b,rst=%b,d=%b,q=%b,qbar=%b",clk,rst,d,q,qbar);
+       clk=0;
+       rst=0;
+       forever
+         #5 clk=~clk;
+  end
+  initial
+    begin
+     @(posedge clk);
+     @(negedge clk) rst=1;
+     @(posedge clk);
+     @(negedge clk) rst=0; d=0;
+     @(posedge clk);
+     @(negedge clk)  d=1;
+     @(posedge clk);
+     @(posedge clk);
+    #10;
+    $finish;
+  end
+endmodule
