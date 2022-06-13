@@ -91,7 +91,7 @@ endmodule
 // testbench
 `timescale 1ns/1ps
 module tb;
- reg j,k;
+ reg d;
  reg clk,rst;
  wire q,qbar;
  dff ins1(clk,rst,d,q,qbar);
