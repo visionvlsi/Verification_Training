@@ -1,0 +1,60 @@
+// Code your design here
+//sram
+//ram : random access memory
+//its like a storage system
+
+/*addr 0 0
+addr 1 10
+addr 2 20
+......
+
+addr 1-23 1000
+
+1KB : TOTAL 1024 LOCATION
+     IN EACH LOCATION YOU CAN HAVE 8 BITS 1 BYTE */
+
+module sram(clk,rst,wr,rd,addr,wdata,rdata);
+  input clk,rst;
+  input wr,rd;
+  input [3:0]addr;
+  input [7:0]wdata;
+  output reg [7:0]rdata;
+  
+  
+  reg [7:0]mem[0:15];
+  
+  integer i;
+  
+  
+  always @(posedge clk)
+    begin
+      if(rst)
+        begin
+          for(i=0;i<16;i=i+1)
+            begin
+              mem[i] <= 8'd0;// This is to convert the memory from unknown state to known value.
+            end
+        end
+      else
+         begin
+           if(wr)
+             mem[addr] <= wdata;
+           else
+             mem <= mem;
+           
+         end
+     
+    end
+  
+  always @(posedge clk)
+    begin
+      if(!rst)
+         begin
+           if(rd)
+             rdata <= mem[addr];
+           else
+             rdata<=rdata;
+         end
+    end
+  
+endmodule
