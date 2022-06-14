@@ -174,3 +174,50 @@ module tb;
 endmodule
 
 //https://www.edaplayground.com/x/r_RM
+
+
+// Design and implement a system which takes 4-bit data and shifts left, right, reverses, passes the data depending upon a control signal(Don’t use any registers).
+
+module my_shifter(data_in, control, data_out);
+input [3:0]data_in;
+input [1:0]control;  // {control[1],control[0]}= 2'b01 left shift; =2'b10 right shift; 
+                     //                        =2'b11 data pass; =2'b00 no changes
+output [3:0]data_out;
+assign data_out = (control==2'b00) ? data_out : (control==2'b01) ? data_in<<1 : (control==2'b10) ? data_in >> 1 : data_in;
+endmodule
+
+// testbench 
+
+`timescale 1ns / 1ps
+
+module tb_2;
+
+	// Inputs
+	reg [3:0] data_in;
+	reg [1:0] control;
+
+	// Outputs
+	wire [3:0] data_out;
+
+	// Instantiate the Unit Under Test (UUT)
+	my_shifter uut (
+		.data_in(data_in), 
+		.control(control), 
+		.data_out(data_out)
+	);
+
+	initial begin
+		// Initialize Inputs
+		data_in = 4'b1010;
+		#5 control = 0;
+		#5 control = 1;
+      #5 control = 2;
+      #5 control = 3;
+		#5 control = 0;
+      #5 $finish;
+
+	end
+      
+endmodule
+
+
