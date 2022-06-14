@@ -64,3 +64,5 @@ initial
   
   initial begin $dumpfile("dump.vcd"); $dumpvars(1);end
 endmodule
+
+// https://www.edaplayground.com/x/cKQ5
