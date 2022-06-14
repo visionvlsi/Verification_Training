@@ -190,7 +190,7 @@ endmodule
 
 `timescale 1ns / 1ps
 
-module tb_2;
+module tb;
 
 	// Inputs
 	reg [3:0] data_in;
@@ -219,5 +219,43 @@ module tb_2;
 	end
       
 endmodule
+
+//Design and implement a 4-bit Counter
+
+module counter4bit(clk,rst,count4bit);
+input clk,rst;
+output reg [3:0]count4bit;
+
+always@(posedge clk)
+begin
+if(rst)
+count4bit<=0;
+else
+count4bit<=count4bit+1'b1;
+endmodule
+
+// testbench 
+
+`timescale 1ns/1ps
+module test;
+reg clk,rst;
+wire [3:0]count4bit;
+counter4bit ins1(clk,rst,count4bit);
+initial begin 
+rst=0;
+clk=0;
+forever #5 clk=~clk;
+end
+initial
+begin 
+@(posedge clk);
+@(negedge clk) rst=1;
+@(posedge clk);
+@(negedge clk) rst=0;
+@(posedge clk);
+
+end
+endmodule
+
 
 
