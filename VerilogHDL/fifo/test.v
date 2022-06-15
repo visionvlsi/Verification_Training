@@ -13,7 +13,7 @@ module test;
 	wire [3:0] fifo_cnt;
 	wire [7:0] data_out;
 	
-	integer i;
+	integer i,j;
 
 	// Instantiate the Unit Under Test (UUT)
 	fifo uut (
@@ -38,22 +38,21 @@ module test;
 		rst=1;
 		@(posedge clk);
 		rst=1;
-		@(negedge clk);
-		rst=0; wr=1; 
+				
 		for(i=0; i<=7; i=i+1) begin
 		@(negedge clk);
-	    data_in<=i*5;
+	    rst=0; wr=1; rd=0;data_in<=i*5;
 		 @(posedge clk);
 		 data_in<=i*5;
 		 end
-		 @(negedge clk);
-		rd=1; 
-		for(i=0; i<=7; i=i+1) begin
 		@(negedge clk);
-	   	rd=1; 
-		 @(posedge clk);
-			rd=1; 
-		 end
-		 end
+		wr=0; rd=1;
+		for(j=0; j<=7; j=j+1) begin
+		@(negedge clk);
+	   rd=1; 
+		@(posedge clk);
+		rd=1; 
+		end
+		 #200;
+		 $finish; end
 endmodule
-
