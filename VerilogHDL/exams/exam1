@@ -1,0 +1,10 @@
+1.What are the keywords used for dataflow modelling
+2.Types of Races in Verilog and explain with examples
+3.Explain the steps of writing a testbench.
+4.Types of mapping and explain which is best
+5.Write Verilog Design code  for 2 bit comparator using dataflow modelling.
+6.What are types of methodologies in Verilog? Explain with an example
+7.Explain the procedural blocks and where it is used in coding?
+8.Write 8:3 encoder in behavioral modelling
+9.Write Verilog code in Gate level for xor using 2:1 mux
+10.Explain the Verilog Datatypes.
