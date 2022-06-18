@@ -1,0 +1,5 @@
+1. Write a Verilog code to design 5x1 Mux using 2x1 Mux in structural modelling style.
+2. Write a Verilog code for a T-flip-flop using JK flip-flop (Structural modelling). Design JK- flip-flop using behavioral modelling.
+3. Write a Verilog code for Up-Down counter.
+4. Write a Verilog program to design 4bit – Adder circuit using Function.
+5. Design a Random Access Memory of 2K bytes and write a Verilog code.
