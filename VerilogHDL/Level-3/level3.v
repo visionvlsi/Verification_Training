@@ -24,3 +24,60 @@
 /* PRBS or Pseudo Random Binary Sequence is essentially a random sequence of binary numbers. It is random in a sense that the value of an element of the 
 sequence is independent of the values of any of the other elements. It is 'pseudo' because it is deterministic and after N elements it starts to repeat itself, 
 unlike real random sequences.. */
+
+module dff(clk,rst,d,q);
+  input clk,rst,d;
+  output reg q;
+  always@(posedge clk)
+    if(rst)
+      q<=1;
+  else
+    q<=d;
+endmodule
+
+module lfsr4bit(clk,rst,data_out);
+  input clk,rst;
+  output [3:0]data_out;
+  
+  wire [3:0]data_int;
+  wire tap;
+  
+  assign tap=data_int[3]^data_int[0];
+  
+  dff ins1(clk,rst,tap,data_int[0]);
+  dff ins2(clk,rst,data_int[0],data_int[1]);
+  dff ins3(clk,rst,data_int[1],data_int[2]);
+  dff ins4(clk,rst,data_int[2],data_int[3]);
+  
+  assign data_out=data_int;
+endmodule
+  
+     
+//testbench 
+
+`timescale 1ns/1ps
+module tb;
+  reg clk,rst;
+  wire [3:0]data_out;
+  
+  lfsr4bit ins22(clk,rst,data_out);
+  
+  initial 
+    begin
+      clk=0;
+      forever #5 clk=~clk;
+    end
+  initial
+    begin
+      rst=0;
+      #5 rst=1;
+      #2 rst=0;
+    end
+  
+  initial
+    $monitor($time, "clk=%b,rst=%b,data_out=%0d",clk,rst,data_out);
+  initial
+    #2000 $finish;
+endmodule
+
+///https://www.edaplayground.com/x/H5WG
