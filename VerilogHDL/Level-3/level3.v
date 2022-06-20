@@ -165,3 +165,82 @@ module tb_sr;
     $dumpfile("dump.vcd"); $dumpvars;
   end
 endmodule  
+
+
+// Code your design here
+//Write a program for universal shift register?
+
+module usr(clk,rst,mode,din,data_in,data_out,shifted_data);
+  input clk,rst;
+  input [1:0]mode;
+  input din;
+  input [3:0]data_in;
+  output reg [3:0]data_out;
+  output reg shifted_data;
+  
+  always@(posedge clk) 
+    begin
+      if(rst)
+        begin
+          data_out=0;
+          shifted_data=0;          
+        end
+      else
+        case(mode)
+            2'b00: data_out=data_out;             // no change
+            2'b01: begin 
+                   data_out={data_out[2:0],din};
+                   shifted_data=data_out[3];
+                    end                             //left shift
+            2'b10:  begin
+                    data_out={din,data_out[3:1]};
+                    shifted_data=data_out[0];
+                    end                            //right shift
+            2'b11: data_out=data_in;              //parallel load
+         endcase
+            
+    end
+  
+endmodule
+
+// Code your testbench here
+// or browse Examples
+`timescale 1ns/1ps
+module tb;
+  reg clk,rst;
+  reg [1:0]mode;
+  reg din;
+  reg [3:0]data_in;
+  wire [3:0]data_out;
+  wire shifted_data;
+
+usr		ins(clk,rst,mode,din,data_in,data_out,shifted_data);
+
+initial begin
+  clk=0;
+  forever #5 clk=~clk;
+end
+
+initial begin
+  @(negedge clk) rst=1;
+  @(posedge clk) rst=1;
+  @(negedge clk) rst=0; mode=2'b00; 
+  @(posedge clk) rst=0; mode=2'b00; 
+  @(negedge clk)  mode=2'b01; din=1;
+  @(posedge clk)  mode=2'b01; din=1;
+  @(posedge clk);
+  @(posedge clk);
+  @(posedge clk);
+  @(negedge clk)  mode=2'b10; din=0;
+  @(posedge clk)  mode=2'b10; din=0;
+  @(posedge clk);
+  @(posedge clk);
+  @(posedge clk);
+  @(negedge clk)  mode=2'b11; data_in=4'b1010;
+  @(posedge clk)  mode=2'b11; data_in=4'b1010;
+  @(posedge clk)
+  $finish;
+ end
+
+initial begin $dumpfile("dump.vcd"); $dumpvars(1);end
+endmodule
