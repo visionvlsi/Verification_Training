@@ -118,7 +118,7 @@ module test;
            
            
       
-		for(i=0; i<=7; i=i+1) 
+           for(i=0; i<=31; i=i+1) 
           begin
             @(negedge clk) rst=0; wr=1; rd=0;data_in=i*5; ref_data[i]=i*5;  
             @(posedge clk) rst=0; wr=1; rd=0;data_in=i*5; ref_data[i]=i*5;
@@ -128,14 +128,14 @@ module test;
            @(negedge clk) wr=0; rd=1;
            @(posedge clk) wr=0; rd=1;
           
-		for(j=0; j<=7; j=j+1) 
+           for(j=0; j<=31; j=j+1) 
           begin
             @(negedge clk) wr=0; rd=1; rcvd_data[j]=data_out; 
             @(posedge clk) wr=0; rd=1; rcvd_data[j]=data_out; 
            end
            
     	          
-  for(k=0; k<=7; k=k+1)
+           for(k=0; k<=31; k=k+1)
     begin
       if(ref_data[k]==rcvd_data[k])
         $display($time, "Data pass  %d received data=%d \t refdata=%d ",k,rcvd_data[k], ref_data[k]);
@@ -149,6 +149,5 @@ module test;
  
 
 endmodule
-
 
 //https://www.edaplayground.com/x/niwe
