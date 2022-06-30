@@ -103,14 +103,39 @@ endmodule
 
 // 1. Synchronous Counters : Based on clock
  
+module counter_sync(clk,rst,count);
+ input clk,rst;
+ output reg [3:0]count;
+ always@(posedge clk) begin 
+  if(rst)
+   count<=4'b0;
+  else
+   count<=count+1'b1; 
+ end 
+endmodule
 
+//testbench
+module test;
+ reg clk,rst;
+ wire [3:0]count;
+ counter_sync dut(clk,rst,count);
+ initial begin 
+ clk=0;
+  forever #5 clk=~clk; 
+ end
+ 
+ initial begin
+  @(negedge clk) rst=1;
+  @(posedge clk) rst=1
+  @(negedge clk) rst=0;
+ end
+ initial begin 
+  $dumpfile("counter.vcd");
+  $dumpvars(1); 
+ end
+endmodule
 
-
-
-
-
-
-
+//https://www.edaplayground.com/x/THwg
 
 //2. Asynchronous Counters: May be clock or more than signal other than clock
 
