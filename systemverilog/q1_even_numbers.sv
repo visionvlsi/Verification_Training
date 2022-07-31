@@ -1,3 +1,5 @@
+//1. Write a program to enter even numbers with array size 30 elements using functions inside a class and display the result.
+
 class evennumbers;
   int en[30];
   function new(int en[30]);
