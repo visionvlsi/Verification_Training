@@ -1,0 +1,88 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/zakirhussain/Desktop/lab/lab5/Lab 5
+T_opt
+!s110 1659516252
+VC4Xoa97E^54i`E8P@1CDL0
+04 3 4 work top fast 0
+=1-98ded012c6f1-62ea355c-1ad-6a0
+o-quiet -auto_acc_if_foreign -work work
+n@_opt
+OL;O;10.4e;61
+R0
+vram_dut
+Z1 DXx6 sv_std 3 std 0 22 WmjPaeP=7F5?QFXzJ>D[Q2
+Z2 !s110 1659516322
+!i10b 1
+!s100 XLInjMOV_V25bO@bJj9:z2
+IWaoN:fHh^H`gkE[PJ:j0>3
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+!s105 ram_dut_sv_unit
+S1
+R0
+w1650476964
+8ram_dut.sv
+Fram_dut.sv
+L0 1
+Z4 OL;L;10.4e;61
+r1
+!s85 0
+31
+Z5 !s108 1659516322.000000
+Z6 !s107 top.sv|testbench.sv|ram_dut.sv|
+Z7 !s90 -reportprogress|300|ram_dut.sv|testbench.sv|top.sv|+acc|
+!i113 0
+Z8 o+acc -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+4testbench
+R1
+R2
+!i10b 1
+!s100 d7^dfz6OOBL93]j`K4Pdb1
+IjNEjzz^8Jg<9SgRmC7gmU2
+R3
+!s105 testbench_sv_unit
+S1
+R0
+w1659516247
+8testbench.sv
+Ftestbench.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!i113 0
+R8
+vtop
+R1
+R2
+!i10b 1
+!s100 ?c`73Vj>KPXDTO8Vli;Eo0
+IWfLkjOS4VLkeeJJ11bGff1
+R3
+!s105 top_sv_unit
+S1
+R0
+w1659516203
+8top.sv
+Ftop.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!i113 0
+R8
