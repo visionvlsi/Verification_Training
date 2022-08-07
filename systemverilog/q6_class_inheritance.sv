@@ -41,7 +41,7 @@ class classB extends classA;
   endfunction
   
   function void displayB();
-    $display("This is from classB: subtraction operation:: operand1=%0d and operand2=%0d and The diff=%0d",this.a1, this.b1, diff);
+    $display("This is from classB: subtraction operation:: operand1=%0d and operand2=%0d and The diff=%0d",this.a2, this.b2, diff);
   endfunction
   
 endclass
@@ -63,7 +63,7 @@ class classC extends classB;
   endfunction
   
   function void displayC();
-    $display("This is from classC: Multiplication operation:: operand1=%0d and operand2=%0d and The mult=%0d", this.a1, this.b1,mult);
+    $display("This is from classC: Multiplication operation:: operand1=%0d and operand2=%0d and The mult=%0d", this.a3, this.b3,mult);
   endfunction
   
 endclass
@@ -84,10 +84,12 @@ class classD extends classC;
   endfunction
   
   function void displayD();
-    $display("This is from classD: Division operation:: operand1=%0d and operand2=%0d and The div=%0d", this.a1, this.b1,div);
+    $display("This is from classD: Division operation:: operand1=%0d and operand2=%0d and The div=%0d", this.a4, this.b4,div);
   endfunction
   
 endclass
+
+
 
 
 module tb;
@@ -104,6 +106,9 @@ module tb;
     
     
   end
+  
+  
+  
   
 endmodule
 
