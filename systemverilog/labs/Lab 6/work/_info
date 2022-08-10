@@ -1,0 +1,117 @@
+m255
+K4
+z2
+!s99 nomlopt
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/dell/Desktop/svhomework/Lab 6
+T_opt
+!s110 1660017545
+V?4V65aT`m;Gg>9NAEg9eP3
+04 3 4 work top fast 0
+=1-4a41ba8389de-62f1db89-b7-2bb0
+!s124 OEM100
+o-quiet -auto_acc_if_foreign -work work
+Z1 tCvgOpt 0
+n@_opt
+OL;O;2021.1;73
+vram_dut
+Z2 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z3 !s110 1660017539
+!i10b 1
+!s100 m^8SXXOQzZ?iMH<S_:Ckj0
+IbMK:Hj3CBnAQBLQc0i^4A2
+S1
+R0
+w1650476964
+8ram_dut.sv
+Fram_dut.sv
+!i122 4
+L0 1 26
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+Z5 OL;L;2021.1;73
+r1
+!s85 0
+31
+Z6 !s108 1660017539.000000
+Z7 !s107 top.sv|testbench.sv|interface.sv|ram_dut.sv|
+Z8 !s90 -f|.\filelist.f|
+!i113 0
+Z9 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+Ysimple_bus
+R2
+R3
+!i10b 1
+!s100 `nJ?@iWoJbI[3lH>GNWgD3
+IDDogekE4n@B?c6bP6HQP43
+S1
+R0
+w1660017535
+8interface.sv
+Finterface.sv
+!i122 4
+L0 2 0
+R4
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!i113 0
+R9
+R1
+4testbench
+R2
+R3
+!i10b 1
+!s100 U3hn3;3I:iV;f2>2eEf^f0
+I>D]UhZf5g2?dc5<[S?[ZB0
+S1
+R0
+w1660017387
+8testbench.sv
+Ftestbench.sv
+!i122 4
+L0 1 0
+R4
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!i113 0
+R9
+R1
+vtop
+R2
+R3
+!i10b 1
+!s100 G_Kh]3HFHYQ36:;a8j;MS1
+IMD_g5:Y^J:?m>hSeoL_`m2
+S1
+R0
+w1660014241
+8top.sv
+Ftop.sv
+!i122 4
+L0 2 17
+R4
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!i113 0
+R9
+R1
