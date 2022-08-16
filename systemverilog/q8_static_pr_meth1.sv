@@ -31,3 +31,5 @@ initial begin
 end
 
 endmodule
+
+//https://www.edaplayground.com/x/LrSV
